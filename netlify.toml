@@ -1,8 +1,9 @@
-# Teszt ág: a gyökérkönyvtárat publikálja, build nélkül.
+# Teszt ág: a gyökérkönyvtárat publikálja, a szerverfüggvény a közös tárolót kezeli.
 # Az éles (production) context szándékosan hibára fut, hogy ne fogyjon kredit.
 [build]
   publish = "."
   command = "echo Teszt deploy"
+  functions = "netlify/functions"
 
 [context.production]
   command = "echo Az eles deploy le van tiltva && exit 1"
