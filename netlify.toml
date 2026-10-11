@@ -1,0 +1,8 @@
+# Teszt ág: a gyökérkönyvtárat publikálja, build nélkül.
+# Az éles (production) context szándékosan hibára fut, hogy ne fogyjon kredit.
+[build]
+  publish = "."
+  command = "echo Teszt deploy"
+
+[context.production]
+  command = "echo Az eles deploy le van tiltva && exit 1"
