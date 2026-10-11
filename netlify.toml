@@ -1,0 +1,4 @@
+# Szándékosan sikertelen éles build, hogy ne fogyjon kredit.
+# Az oldalt a "teszt" ág branch deployja szolgálja ki.
+[build]
+  command = "echo Az eles ag nem deployol && exit 1"
